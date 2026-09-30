@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FRANCIS FUTI AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         BARRA LATERAL
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <!-- LOGO -->
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    FF
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        FRANCIS FUTI
+                    </strong>
+
+                    <span>
+                        AI
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOVO CHAT -->
+
+            <button
+                class="new-chat"
+                id="novoChat"
+                type="button"
+            >
+
+                <span class="icon">
+                    ＋
+                </span>
+
+                <span>
+                    Novo chat
+                </span>
+
+            </button>
+
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <div class="menu-label">
+                    PRINCIPAL
+                </div>
+
+
+                <!-- CHAT -->
+
+                <button
+                    class="menu-item active"
+                    id="menuChat"
+                    type="button"
+                >
+
+                    <span class="menu-icon">
+                        ◌
+                    </span>
+
+                    <span>
+                        Chat
+                    </span>
+
+                </button>
+
+
+                <!-- LIVROS -->
+
+                <button
+                    class="menu-item"
+                    id="menuLivros"
+                    type="button"
+                >
+
+                    <span class="menu-icon">
+                        ▣
+                    </span>
+
+                    <span>
+                        Livros
+                    </span>
+
+                </button>
+
+
+                <!-- ORIENTAÇÕES -->
+
+                <button
+                    class="menu-item"
+                    id="menuOrientacoes"
+                    type="button"
+                >
+
+                    <span class="menu-icon">
+                        ◇
+                    </span>
+
+                    <span>
+                        Orientações
+                    </span>
+
+                </button>
+
+
+                <div class="menu-label">
+                    ESPECIALIZAÇÃO
+                </div>
+
+
+                <!-- ENGENHARIA ELÉTRICA -->
+
+                <button
+                    class="menu-item"
+                    id="menuEngenharia"
+                    type="button"
+                >
+
+                    <span class="menu-icon">
+                        ⚡
+                    </span>
+
+                    <span>
+                        Engenharia Elétrica
+                    </span>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+
+        <!-- PARTE INFERIOR -->
+
+        <div class="sidebar-bottom">
+
+            <div class="system-card">
+
+                <span class="system-dot"></span>
+
+                <div>
+
+                    <strong>
+                        FRANCIS FUTI AI
+                    </strong>
+
+                    <small>
+                        Sistema online
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="menu-item settings"
+                id="menuDefinicoes"
+                type="button"
+            >
+
+                <span class="menu-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Definições
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                class="mobile-menu"
+                id="mobileMenu"
+                type="button"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+
+            <div
+                class="topbar-title"
+                id="topbarTitle"
+            >
+                FRANCIS FUTI AI
+            </div>
+
+
+            <div class="topbar-status">
+
+                <span></span>
+
+                Online
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section
+            class="chat-area"
+            id="chatArea"
+        >
+
+
+            <!-- =================================================
+                 CHAT
+            ================================================== -->
+
+            <div
+                id="chatView"
+                class="view"
+            >
+
+                <div
+                    class="welcome-screen"
+                    id="welcomeScreen"
+                >
+
+                    <div class="welcome-logo">
+                        FF
+                    </div>
+
+                    <h1>
+                        FRANCIS FUTI AI
+                    </h1>
+
+                    <p>
+                        Assistente inteligente especializado
+                        em Engenharia Elétrica.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="messages"
+                    id="messages"
+                ></div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BIBLIOTECA
+            ================================================== -->
+
+            <div
+                id="livrosView"
+                class="view library-view"
+                style="display: none;"
+            >
+
+                <div class="library-container">
+
+
+                    <!-- CABEÇALHO -->
+
+                    <div class="library-header">
+
+                        <div>
+
+                            <div class="library-title">
+                                Biblioteca
+                            </div>
+
+                            <div class="library-subtitle">
+                                Os teus livros e materiais de estudo.
+                            </div>
+
+                        </div>
+
+
+                        <label
+                            class="library-upload-button"
+                            for="arquivoLivro"
+                        >
+
+                            <span>
+                                ＋
+                            </span>
+
+                            Adicionar livro
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="arquivoLivro"
+                            accept=".pdf,application/pdf"
+                            hidden
+                        >
+
+                    </div>
+
+
+                    <!-- PESQUISA -->
+
+                    <div class="library-search">
+
+                        <span>
+                            🔎
+                        </span>
+
+                        <input
+                            type="text"
+                            id="pesquisaLivro"
+                            placeholder="Pesquisar livros..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- STATUS -->
+
+                    <div
+                        id="uploadStatus"
+                        class="upload-status"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <!-- LIVROS -->
+
+                    <div
+                        id="listaLivros"
+                        class="books-grid"
+                    >
+
+                        <div class="library-loading">
+                            A carregar biblioteca...
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ORIENTAÇÕES
+            ================================================== -->
+
+            <div
+                id="orientacoesView"
+                class="view simple-view"
+                style="display: none;"
+            >
+
+                <div class="simple-container">
+
+                    <div class="simple-icon">
+                        ◇
+                    </div>
+
+                    <h1>
+                        Orientações
+                    </h1>
+
+                    <p>
+                        Área de orientação e acompanhamento
+                        do FRANCIS FUTI AI.
+                    </p>
+
+                    <div class="coming-card">
+
+                        <strong>
+                            Em construção
+                        </strong>
+
+                        <span>
+                            Esta área será desenvolvida
+                            nas próximas etapas.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ENGENHARIA ELÉTRICA
+            ================================================== -->
+
+            <div
+                id="engenhariaView"
+                class="view simple-view"
+                style="display: none;"
+            >
+
+                <div class="simple-container">
+
+                    <div class="simple-icon">
+                        ⚡
+                    </div>
+
+                    <h1>
+                        Engenharia Elétrica
+                    </h1>
+
+                    <p>
+                        Área especializada em Engenharia
+                        Elétrica do FRANCIS FUTI AI.
+                    </p>
+
+
+                    <div class="engineering-grid">
+
+
+                        <div class="subject-card">
+
+                            <span>
+                                ⚡
+                            </span>
+
+                            <strong>
+                                Circuitos Elétricos
+                            </strong>
+
+                            <small>
+                                Análise e resolução de circuitos.
+                            </small>
+
+                        </div>
+
+
+                        <div class="subject-card">
+
+                            <span>
+                                ∿
+                            </span>
+
+                            <strong>
+                                Eletrónica
+                            </strong>
+
+                            <small>
+                                Componentes e sistemas eletrónicos.
+                            </small>
+
+                        </div>
+
+
+                        <div class="subject-card">
+
+                            <span>
+                                ⚙
+                            </span>
+
+                            <strong>
+                                Máquinas Elétricas
+                            </strong>
+
+                            <small>
+                                Motores, geradores e transformadores.
+                            </small>
+
+                        </div>
+
+
+                        <div class="subject-card">
+
+                            <span>
+                                ⌁
+                            </span>
+
+                            <strong>
+                                Sistemas de Potência
+                            </strong>
+
+                            <small>
+                                Geração, transmissão e distribuição.
+                            </small>
+
+                        </div>
+
+
+                        <div class="subject-card">
+
+                            <span>
+                                ∑
+                            </span>
+
+                            <strong>
+                                Matemática Aplicada
+                            </strong>
+
+                            <small>
+                                Cálculos usados na engenharia.
+                            </small>
+
+                        </div>
+
+
+                        <div class="subject-card">
+
+                            <span>
+                                ◉
+                            </span>
+
+                            <strong>
+                                Automação e Controlo
+                            </strong>
+
+                            <small>
+                                Sistemas de controlo e automação.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 DEFINIÇÕES
+            ================================================== -->
+
+            <div
+                id="definicoesView"
+                class="view simple-view"
+                style="display: none;"
+            >
+
+                <div class="simple-container">
+
+                    <div class="simple-icon">
+                        ⚙
+                    </div>
+
+                    <h1>
+                        Definições
+                    </h1>
+
+                    <p>
+                        Configurações do FRANCIS FUTI AI.
+                    </p>
+
+                    <div class="coming-card">
+
+                        <strong>
+                            Em construção
+                        </strong>
+
+                        <span>
+                            As configurações serão adicionadas
+                            nas próximas etapas.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             COMPOSITOR DO CHAT
+        ====================================================== -->
+
+        <footer
+            class="composer-area"
+            id="composerArea"
+        >
+
+            <div class="composer">
+
+                <button
+                    class="attach-button"
+                    type="button"
+                    title="Adicionar"
+                >
+                    ＋
+                </button>
+
+
+                <textarea
+                    id="pergunta"
+                    rows="1"
+                    placeholder="Pergunta ao FRANCIS FUTI AI..."
+                    autocomplete="off"
+                ></textarea>
+
+
+                <button
+                    class="send-button"
+                    id="enviar"
+                    type="button"
+                    title="Enviar"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+
+            <div class="composer-footer">
+
+                <span>
+                    FRANCIS FUTI AI
+                </span>
+
+                <span>
+                    A IA pode cometer erros.
+                    Verifica informações importantes.
+                </span>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script>
+
+
+/* =========================================================
+   ELEMENTOS
+========================================================= */
+
+const pergunta =
+    document.getElementById("pergunta");
+
+const botaoEnviar =
+    document.getElementById("enviar");
+
+const messages =
+    document.getElementById("messages");
+
+const welcomeScreen =
+    document.getElementById("welcomeScreen");
+
+const novoChat =
+    document.getElementById("novoChat");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+const sidebar =
+    document.getElementById("sidebar");
+
+const topbarTitle =
+    document.getElementById("topbarTitle");
+
+const composerArea =
+    document.getElementById("composerArea");
+
+
+/* =========================================================
+   MENUS
+========================================================= */
+
+const menuChat =
+    document.getElementById("menuChat");
+
+const menuLivros =
+    document.getElementById("menuLivros");
+
+const menuOrientacoes =
+    document.getElementById("menuOrientacoes");
+
+const menuEngenharia =
+    document.getElementById("menuEngenharia");
+
+const menuDefinicoes =
+    document.getElementById("menuDefinicoes");
+
+
+/* =========================================================
+   VIEWS
+========================================================= */
+
+const chatView =
+    document.getElementById("chatView");
+
+const livrosView =
+    document.getElementById("livrosView");
+
+const orientacoesView =
+    document.getElementById("orientacoesView");
+
+const engenhariaView =
+    document.getElementById("engenhariaView");
+
+const definicoesView =
+    document.getElementById("definicoesView");
+
+
+/* =========================================================
+   BIBLIOTECA
+========================================================= */
+
+const arquivoLivro =
+    document.getElementById("arquivoLivro");
+
+const listaLivros =
+    document.getElementById("listaLivros");
+
+const pesquisaLivro =
+    document.getElementById("pesquisaLivro");
+
+const uploadStatus =
+    document.getElementById("uploadStatus");
+
+let livrosAtuais = [];
+
+
+/* =========================================================
+   TROCAR VIEW
+========================================================= */
+
+function mostrarView(
+    view,
+    titulo,
+    mostrarCompositor = false
+) {
+
+    chatView.style.display = "none";
+    livrosView.style.display = "none";
+    orientacoesView.style.display = "none";
+    engenhariaView.style.display = "none";
+    definicoesView.style.display = "none";
+
+
+    view.style.display = "block";
+
+
+    topbarTitle.textContent = titulo;
+
+
+    composerArea.style.display =
+        mostrarCompositor
+            ? "block"
+            : "none";
+
+
+    document
+        .querySelectorAll(".menu-item")
+        .forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+
+    if (view === chatView) {
+        menuChat.classList.add("active");
+    }
+
+    if (view === livrosView) {
+        menuLivros.classList.add("active");
+    }
+
+    if (view === orientacoesView) {
+        menuOrientacoes.classList.add("active");
+    }
+
+    if (view === engenhariaView) {
+        menuEngenharia.classList.add("active");
+    }
+
+    if (view === definicoesView) {
+        menuDefinicoes.classList.add("active");
+    }
+
+
+    if (window.innerWidth <= 768) {
+
+        sidebar.classList.remove("open");
+
+    }
+
+}
+
+
+/* =========================================================
+   ABRIR CHAT
+========================================================= */
+
+function abrirChat() {
+
+    mostrarView(
+        chatView,
+        "FRANCIS FUTI AI",
+        true
+    );
+
+}
+
+
+/* =========================================================
+   ENVIAR MENSAGEM
+========================================================= */
+
+async function enviarMensagem() {
+
+    const texto =
+        pergunta.value.trim();
+
+
+    if (texto === "") {
+        return;
+    }
+
+
+    welcomeScreen.style.display = "none";
+
+
+    const mensagemUsuario =
+        document.createElement("div");
+
+
+    mensagemUsuario.className =
+        "message user-message";
+
+
+    mensagemUsuario.innerHTML = `
+
+        <div class="message-avatar user-avatar">
+            EU
+        </div>
+
+        <div class="message-body">
+
+            <div class="message-name">
+                Você
+            </div>
+
+            <div class="message-text"></div>
+
+        </div>
+
+    `;
+
+
+    mensagemUsuario
+        .querySelector(".message-text")
+        .textContent = texto;
+
+
+    messages.appendChild(
+        mensagemUsuario
+    );
+
+
+    const mensagemAI =
+        document.createElement("div");
+
+
+    mensagemAI.className =
+        "message ai-message";
+
+
+    mensagemAI.innerHTML = `
+
+        <div class="message-avatar ai-avatar">
+            FF
+        </div>
+
+        <div class="message-body">
+
+            <div class="message-name">
+                FRANCIS FUTI AI
+            </div>
+
+            <div class="message-text">
+                A pensar...
+            </div>
+
+        </div>
+
+    `;
+
+
+    messages.appendChild(
+        mensagemAI
+    );
+
+
+    const textoAI =
+        mensagemAI.querySelector(
+            ".message-text"
+        );
+
+
+    pergunta.value = "";
+
+    ajustarAltura();
+
+    pergunta.focus();
+
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+
+    botaoEnviar.disabled = true;
+
+
+    try {
+
+        const resposta =
+            await fetch(
+                "/api/chat",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify({
+                            pergunta: texto
+                        })
+                }
+            );
+
+
+        const data =
+            await resposta.json();
+
+
+        if (!resposta.ok) {
+
+            throw new Error(
+                data.erro ||
+                "Não foi possível obter uma resposta."
+            );
+
+        }
+
+
+        textoAI.textContent =
+            data.resposta ||
+            "Não recebi uma resposta.";
+
+
+    } catch (erro) {
+
+        console.error(
+            "Erro:",
+            erro
+        );
+
+
+        textoAI.textContent =
+            "Desculpa, ocorreu um erro ao comunicar com a IA.";
+
+    } finally {
+
+        botaoEnviar.disabled = false;
+
+        messages.scrollTop =
+            messages.scrollHeight;
+
+    }
+
+}
+
+
+/* =========================================================
+   BOTÃO ENVIAR
+========================================================= */
+
+botaoEnviar.addEventListener(
+    "click",
+    enviarMensagem
+);
+
+
+/* =========================================================
+   ENTER
+========================================================= */
+
+pergunta.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Enter" &&
+            !event.shiftKey
+        ) {
+
+            event.preventDefault();
+
+            enviarMensagem();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+function ajustarAltura() {
+
+    pergunta.style.height = "auto";
+
+
+    pergunta.style.height =
+        Math.min(
+            pergunta.scrollHeight,
+            160
+        ) + "px";
+
+}
+
+
+pergunta.addEventListener(
+    "input",
+    ajustarAltura
+);
+
+
+/* =========================================================
+   NOVO CHAT
+========================================================= */
+
+novoChat.addEventListener(
+    "click",
+    function() {
+
+        messages.innerHTML = "";
+
+        welcomeScreen.style.display = "flex";
+
+        pergunta.value = "";
+
+        ajustarAltura();
+
+        abrirChat();
+
+        pergunta.focus();
+
+    }
+);
+
+
+/* =========================================================
+   MENU CHAT
+========================================================= */
+
+menuChat.addEventListener(
+    "click",
+    function() {
+
+        abrirChat();
+
+    }
+);
+
+
+/* =========================================================
+   MENU LIVROS
+========================================================= */
+
+menuLivros.addEventListener(
+    "click",
+    function() {
+
+        mostrarView(
+            livrosView,
+            "Biblioteca",
+            false
+        );
+
+
+        carregarLivros();
+
+    }
+);
+
+
+/* =========================================================
+   MENU ORIENTAÇÕES
+========================================================= */
+
+menuOrientacoes.addEventListener(
+    "click",
+    function() {
+
+        mostrarView(
+            orientacoesView,
+            "Orientações",
+            false
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MENU ENGENHARIA
+========================================================= */
+
+menuEngenharia.addEventListener(
+    "click",
+    function() {
+
+        mostrarView(
+            engenhariaView,
+            "Engenharia Elétrica",
+            false
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MENU DEFINIÇÕES
+========================================================= */
+
+menuDefinicoes.addEventListener(
+    "click",
+    function() {
+
+        mostrarView(
+            definicoesView,
+            "Definições",
+            false
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CARREGAR LIVROS DO SERVIDOR
+========================================================= */
+
+async function carregarLivros() {
+
+    listaLivros.innerHTML = `
+
+        <div class="library-loading">
+            A carregar biblioteca...
+        </div>
+
+    `;
+
+
+    try {
+
+        const resposta =
+            await fetch(
+                "/api/livros",
+                {
+                    cache: "no-store"
+                }
+            );
+
+
+        const data =
+            await resposta.json();
+
+
+        if (!resposta.ok) {
+
+            throw new Error(
+                data.erro ||
+                "Erro ao carregar livros."
+            );
+
+        }
+
+
+        livrosAtuais =
+            Array.isArray(data)
+                ? data
+                : [];
+
+
+        renderizarLivros(
+            livrosAtuais
+        );
+
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao carregar biblioteca:",
+            erro
+        );
+
+
+        listaLivros.innerHTML = `
+
+            <div class="library-empty">
+
+                <div class="empty-icon">
+                    ⚠
+                </div>
+
+                <strong>
+                    Não foi possível carregar a biblioteca.
+                </strong>
+
+                <span>
+                    Verifica se o servidor está funcionando.
+                </span>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   RENDERIZAR LIVROS
+========================================================= */
+
+function renderizarLivros(livros) {
+
+    if (!livros.length) {
+
+        listaLivros.innerHTML = `
+
+            <div class="library-empty">
+
+                <div class="empty-icon">
+                    📚
+                </div>
+
+                <strong>
+                    A biblioteca está vazia.
+                </strong>
+
+                <span>
+                    Adiciona o teu primeiro livro em PDF.
+                </span>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    listaLivros.innerHTML = "";
+
+
+    livros.forEach(
+        livro => {
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "book-card";
+
+
+            const nome =
+                obterNomeLivro(
+                    livro.nome
+                );
+
+
+            card.innerHTML = `
+
+                <div class="book-icon">
+                    PDF
+                </div>
+
+                <div class="book-info">
+
+                    <strong
+                        class="book-name"
+                        title="${escaparHTML(nome)}"
+                    >
+                        ${escaparHTML(nome)}
+                    </strong>
+
+                    <span>
+                        ${formatarTamanho(livro.tamanho)}
+                    </span>
+
+                </div>
+
+                <div class="book-actions">
+
+                    <button
+                        class="book-open"
+                        type="button"
+                        title="Abrir livro"
+                    >
+                        Abrir
+                    </button>
+
+                    <button
+                        class="book-delete"
+                        type="button"
+                        title="Eliminar livro"
+                    >
+                        🗑
+                    </button>
+
+                </div>
+
+            `;
+
+
+            /* ABRIR */
+
+            card
+                .querySelector(".book-open")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        window.open(
+                            livro.url,
+                            "_blank",
+                            "noopener,noreferrer"
+                        );
+
+                    }
+                );
+
+
+            /* ELIMINAR */
+
+            card
+                .querySelector(".book-delete")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        eliminarLivro(
+                            livro.nome
+                        );
+
+                    }
+                );
+
+
+            listaLivros.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   NOME DO LIVRO
+========================================================= */
+
+function obterNomeLivro(nome) {
+
+    return nome
+        .replace(
+            /^\d+-/,
+            ""
+        )
+        .replace(
+            /\.pdf$/i,
+            ""
+        )
+        .replace(
+            /_/g,
+            " "
+        );
+
+}
+
+
+/* =========================================================
+   ESCAPAR HTML
+========================================================= */
+
+function escaparHTML(texto) {
+
+    return String(texto)
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================================
+   FORMATAR TAMANHO
+========================================================= */
+
+function formatarTamanho(bytes) {
+
+    if (bytes < 1024) {
+
+        return bytes + " B";
+
+    }
+
+
+    if (bytes < 1024 * 1024) {
+
+        return (
+            (bytes / 1024).toFixed(1)
+            + " KB"
+        );
+
+    }
+
+
+    if (bytes < 1024 * 1024 * 1024) {
+
+        return (
+            (bytes / (1024 * 1024)).toFixed(1)
+            + " MB"
+        );
+
+    }
+
+
+    return (
+        (bytes / (1024 * 1024 * 1024)).toFixed(1)
+        + " GB"
+    );
+
+}
+
+
+/* =========================================================
+   UPLOAD REAL
+========================================================= */
+
+arquivoLivro.addEventListener(
+    "change",
+    async function() {
+
+        const arquivo =
+            arquivoLivro.files[0];
+
+
+        if (!arquivo) {
+            return;
+        }
+
+
+        const nomeArquivo =
+            arquivo.name.toLowerCase();
+
+
+        if (
+            !nomeArquivo.endsWith(".pdf")
+        ) {
+
+            mostrarStatus(
+                "Seleciona apenas arquivos PDF.",
+                "error"
+            );
+
+            arquivoLivro.value = "";
+
+            return;
+
+        }
+
+
+        const tamanhoMaximo =
+            50 * 1024 * 1024;
+
+
+        if (
+            arquivo.size > tamanhoMaximo
+        ) {
+
+            mostrarStatus(
+                "O PDF não pode ultrapassar 50 MB.",
+                "error"
+            );
+
+            arquivoLivro.value = "";
+
+            return;
+
+        }
+
+
+        const formulario =
+            new FormData();
+
+
+        formulario.append(
+            "livro",
+            arquivo
+        );
+
+
+        mostrarStatus(
+            "A enviar o livro...",
+            "loading"
+        );
+
+
+        try {
+
+            const resposta =
+                await fetch(
+                    "/api/livros/upload",
+                    {
+                        method: "POST",
+                        body: formulario
+                    }
+                );
+
+
+            let data = {};
+
+
+            try {
+
+                data =
+                    await resposta.json();
+
+            } catch {
+
+                data = {};
+
+            }
+
+
+            if (!resposta.ok) {
+
+                throw new Error(
+                    data.erro ||
+                    "Erro ao enviar o livro."
+                );
+
+            }
+
+
+            mostrarStatus(
+                "✓ Livro enviado com sucesso.",
+                "success"
+            );
+
+
+            arquivoLivro.value = "";
+
+
+            /* Atualizar biblioteca */
+
+            await carregarLivros();
+
+
+        } catch (erro) {
+
+            console.error(
+                "Erro no upload:",
+                erro
+            );
+
+
+            mostrarStatus(
+                erro.message ||
+                "Não foi possível enviar o livro.",
+                "error"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+let timerStatus;
+
+
+function mostrarStatus(
+    mensagem,
+    tipo
+) {
+
+    clearTimeout(
+        timerStatus
+    );
+
+
+    uploadStatus.textContent =
+        mensagem;
+
+
+    uploadStatus.className =
+        "upload-status " + tipo;
+
+
+    timerStatus =
+        setTimeout(
+            function() {
+
+                uploadStatus.textContent =
+                    "";
+
+                uploadStatus.className =
+                    "upload-status";
+
+            },
+            5000
+        );
+
+}
+
+
+/* =========================================================
+   ELIMINAR LIVRO
+========================================================= */
+
+async function eliminarLivro(nome) {
+
+    const confirmar =
+        window.confirm(
+            "Tens certeza que queres eliminar este livro?"
+        );
+
+
+    if (!confirmar) {
+        return;
+    }
+
+
+    mostrarStatus(
+        "A eliminar o livro...",
+        "loading"
+    );
+
+
+    try {
+
+        const resposta =
+            await fetch(
+                "/api/livros/" +
+                encodeURIComponent(nome),
+                {
+                    method: "DELETE"
+                }
+            );
+
+
+        let data = {};
+
+
+        try {
+
+            data =
+                await resposta.json();
+
+        } catch {
+
+            data = {};
+
+        }
+
+
+        if (!resposta.ok) {
+
+            throw new Error(
+                data.erro ||
+                "Não foi possível eliminar o livro."
+            );
+
+        }
+
+
+        mostrarStatus(
+            "✓ Livro eliminado com sucesso.",
+            "success"
+        );
+
+
+        await carregarLivros();
+
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao eliminar livro:",
+            erro
+        );
+
+
+        mostrarStatus(
+            erro.message ||
+            "Erro ao eliminar o livro.",
+            "error"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   PESQUISA
+========================================================= */
+
+pesquisaLivro.addEventListener(
+    "input",
+    function() {
+
+        const pesquisa =
+            pesquisaLivro.value
+                .trim()
+                .toLowerCase();
+
+
+        const filtrados =
+            livrosAtuais.filter(
+                livro => {
+
+                    const nome =
+                        obterNomeLivro(
+                            livro.nome
+                        )
+                        .toLowerCase();
+
+
+                    return nome.includes(
+                        pesquisa
+                    );
+
+                }
+            );
+
+
+        renderizarLivros(
+            filtrados
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+mobileMenu.addEventListener(
+    "click",
+    function() {
+
+        sidebar.classList.toggle(
+            "open"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   FECHAR MENU MOBILE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            window.innerWidth <= 768 &&
+            sidebar.classList.contains("open") &&
+            !sidebar.contains(event.target) &&
+            event.target !== mobileMenu
+        ) {
+
+            sidebar.classList.remove(
+                "open"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INICIALIZAÇÃO
+========================================================= */
+
+carregarLivros();
+
+</script>
+
+</body>
+</html>
